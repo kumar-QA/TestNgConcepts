@@ -38,8 +38,8 @@ public class Demo1 {
         driver.findElement(By.id("password")).sendKeys(pwd);
         driver.findElement(By.id("submit")).click();
         Thread.sleep(1000);
-   String Actualvalue= driver.findElement(By.tagName("h1")).getText();
-	String customervalue="Successfully";	
+   String Actualvalue= driver.findElement(By.id("error")).getText();
+	String customervalue="enter valid username";	
 	
 	Assert.assertEquals(Actualvalue, customervalue);
 	

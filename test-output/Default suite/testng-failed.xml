@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="aboutTestngXMl.Demo3">
+      <class name="aboutTestngXMl.InvoactionCountEx">
         <methods>
-          <include name="Login"/>
+          <include name="m2"/>
+          <include name="m1"/>
         </methods>
-      </class> <!-- aboutTestngXMl.Demo3 -->
+      </class> <!-- aboutTestngXMl.InvoactionCountEx -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

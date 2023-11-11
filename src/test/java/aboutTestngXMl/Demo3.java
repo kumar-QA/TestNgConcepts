@@ -8,21 +8,23 @@ import org.testng.annotations.Test;
 
 public class Demo3 {
 	
+	ChromeDriver driver;
 	@Test
-	public void A() {
-		System.out.println("a method");
+	public void Login(){
+	 driver=new ChromeDriver();
+		driver.get("https://practicetestautomation.com/practice-test-login/");
+        driver.manage().window().maximize();
+        driver.findElement(By.id("username")).sendKeys("Student");
+        driver.findElement(By.id("password")).sendKeys("Password123");
+        driver.findElement(By.id("submit")).click();
+   Assert.assertTrue(false);
+  
 	}
-
 	
-	
-
-	
-	@Test
-	public void B() {
-		System.out.println("b method");
+	@Test(dependsOnMethods = "Login",alwaysRun = true)
+	public void m2() {
+//	System.out.println(driver.findElement(By.tagName("h1")).getText());
+		System.out.println("m2 is executed");
 	}
-	@Test
-	public void C() {
-		System.out.println("c method");
-	}
+	
 }
